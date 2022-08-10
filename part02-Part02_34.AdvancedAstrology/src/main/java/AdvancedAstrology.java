@@ -3,18 +3,45 @@ public class AdvancedAstrology {
 
     public static void printStars(int number) {
         // part 1 of the exercise
+        for (int i = 0; i < number; i++) {
+            System.out.print("*");
+        }
+        System.out.println("");
     }
 
     public static void printSpaces(int number) {
         // part 1 of the exercise
+        for (int i = 0; i < number; i++) {
+            System.out.print(" ");
+        }
     }
 
     public static void printTriangle(int size) {
         // part 2 of the exercise
+        for (int i = 0; i < size; i++) {
+            printSpaces(size - i - 1);
+            printStars(i + 1);
+        }
     }
 
     public static void christmasTree(int height) {
         // part 3 of the exercise
+        int width = height * 2 - 1;
+        int numStars;
+        int numSpaces;
+        for (int i = 0; i < height; i++) {
+            numStars = 2 * i + 1;
+            numSpaces = (width - numStars) / 2;
+            printSpaces(numSpaces);
+            printStars(numStars);
+        }
+
+        numSpaces = (width - 3) /2;
+        for (int i = 0; i < 2; i++) {
+            printSpaces(numSpaces);
+            printStars(3);
+        }
+
     }
 
     public static void main(String[] args) {
