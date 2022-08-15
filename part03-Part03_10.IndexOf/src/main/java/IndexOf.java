@@ -20,5 +20,16 @@ public class IndexOf {
         System.out.println("");
 
         // implement here finding the indices of a number
+
+        System.out.println("Search for?");
+        int number = Integer.valueOf(scanner.nextLine());
+        int index = -1;
+
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == number) {
+                System.out.println(number + " is at index " + i);
+            }
+        }
+
     }
 }
