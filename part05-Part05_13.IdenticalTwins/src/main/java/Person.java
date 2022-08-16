@@ -16,4 +16,10 @@ public class Person {
     }
 
     // implement an equals method here for checking the equality of objects
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o != null && o.getClass() != this.getClass()) return false;
+        Person p = (Person) o;
+        return name.equals(p.name) && birthday.equals(p.birthday) && height == p.height && weight == p.weight;
+    }
 }

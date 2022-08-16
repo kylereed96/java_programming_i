@@ -11,6 +11,12 @@ public class Main {
             System.out.println("Songs are equal.");
         }
 
+        Song testSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+
+        if (!jackSparrow.equals(testSparrow)) {
+            System.out.println("Songs are not equal.");
+        }
+
         if (jackSparrow.equals("Another object")) {
             System.out.println("Strange things are afoot.");
         }

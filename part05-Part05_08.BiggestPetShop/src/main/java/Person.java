@@ -10,6 +10,7 @@ public class Person {
     }
 
     public Person(String name) {
+
         this(name, new Pet("Toothless", "dragon"));
     }
 
@@ -19,7 +20,8 @@ public class Person {
 
     @Override
     public String toString() {
-        return this.nimi;
+
+        return String.format("%s, has a friend called %s (%s)", name, pet.getName(), pet.getBreed());
     }
 
 }

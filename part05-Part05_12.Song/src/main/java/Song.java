@@ -1,3 +1,4 @@
+import java.util.Objects;
 
 public class Song {
 
@@ -14,6 +15,14 @@ public class Song {
     @Override
     public String toString() {
         return this.artist + ": " + this.name + " (" + this.durationInSeconds + " s)";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Song song = (Song) o;
+        return durationInSeconds == song.durationInSeconds && Objects.equals(artist, song.artist) && Objects.equals(name, song.name);
     }
 
 
