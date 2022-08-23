@@ -10,6 +10,8 @@ public class mainProgram {
 
         Scanner scan = new Scanner(System.in);
 
+        UI ui = new UI(scan);
+        ui.start();
     }
 
 }
